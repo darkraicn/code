@@ -1,0 +1,13 @@
+/* Đặt hiệu ứng di chuyển vào một phần tử */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Di chuyển ra ngoài màn hình bên trái */
+    }
+    to {
+        transform: translateX(0); /* Về vị trí ban đầu */
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-out; /* 1s là thời gian, ease-out là kiểu chuyển động */
+}

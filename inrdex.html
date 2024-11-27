@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu tỉnh Cà Mau</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        header h2 {
+    color: #e2ebee; 
+    font-size: 50px; /
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 10px;
+            display: block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+            transform: scale(1.1);
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        main > section {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            padding: 20px;
+        }
+
+        main > section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .image {
+            text-align: center;
+            margin: 20px 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        section.active .image {
+            opacity: 1;
+        }
+
+        section img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        section:hover img {
+            transform: scale(1.05);
+            filter: blur(2px);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+            font-size: 18px;
+            text-align: justify;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        main > section.active p {
+            opacity: 1;
+        }
+
+        section {
+            margin: 20px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+
+
+        .container {
+            padding: 20px;
+            max-width: 750px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a onclick="showContent('home')">Trang chủ</a></li>
+            <li><a onclick="showContent('business')">Ẩm thực</a></li>
+            <li><a onclick="showContent('lehoi')">Lễ Hội</a></li>
+            <li><a onclick="showContent('dulich')">Du Lịch</a></li>
+            <li><a onclick="showContent('projects')">Liên kết</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Trang chủ -->
+        <section id="home" class="active">
+
+            <header><h2>Giới thiệu về tỉnh Cà Mau </h2></header>
+                <p class="my-height" align="justify">Cà Mau là tỉnh nằm ở cực Nam của Việt Nam, nổi tiếng với cảnh quan thiên nhiên hoang sơ và văn hóa đặc sắc. Đây là vùng đất của những cánh rừng ngập mặn, hệ sinh thái đa dạng và những cánh đồng bạt ngàn. Cà Mau còn được biết đến với các làng nghề truyền thống và nền ẩm thực phong phú.</p>
+                <section>
+                    <p><i><b>Vị trí địa lý</b></i></p>
+                    <p class="my-height" align="right">Cà Mau là tỉnh thuộc châu thổ đồng bằng sông Cửu Long, nằm về phía cực Nam của Việt Nam, hình dạng giống chữ V, như một bán đảo có 3 mặt giáp với biển. Phía Bắc giáp tỉnh Kiên Giang, phía Đông Bắc giáp tỉnh Bạc Liêu, phía Đông và Đông Nam giáp với Biển Đông, phía Tây giáp với vịnh Thái Lan.</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://i.ytimg.com/vi/Aj-AXg6tq-M/maxresdefault.jpg" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Cà Mau điểm tận cùng Tổ quốc</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Tỉnh Cà Mau có 9 đơn vị hành chính gồm thành phố Cà Mau và các huyện: Thới Bình, U Minh, Trần Văn Thời, Phú Tân, Cái Nước, Đầm Dơi, Năm Căn, Ngọc Hiển với 101 xã, phường, thị trấn.</p>
+                </section>
+        
+                <section>
+                    <p><i><b>Lịch sử</b></i></p>
+                    <p class="my-height" align="right">Khoảng cuối thế kỷ XVI và đầu thế kỷ XVII, những lưu dân Việt, Hoa, Khmer đến cư trú và sinh sống, hình thành “Xã Cà Mau”. Đến đầu thế kỷ thứ XVIII, “Xã Cà Mau” thuộc trấn Hà Tiên. Đến thời vua Minh Mạng (1820-1840), “Xã Cà Mau” được nâng lên thành huyện Long Xuyên thuộc tỉnh Hà Tiên.</p>
+                    <p class="my-height" align="right">Năm 1947, Pháp thành lập tỉnh Bạc Liêu, Cà Mau trở thành một quận của tỉnh Bạc Liêu.</p>
+                    <p class="my-height" align="right">Ngày 9/3/1956, Chính quyền Sài Gòn lấy quận Cà Mau để thành lập tỉnh Cà Mau, đến ngày 22/10/1956 đổi tên tỉnh Cà Mau thành tỉnh An Xuyên.
+        
+        </p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://sovhttdl.camau.gov.vn/wps/wcm/connect/sovhttvadl/b87ab5fe-0b01-445e-8cda-44c1ef4aa600/1/Gi%E1%BA%A3i+Nh%E1%BA%A5t%2C+t%C3%A1c+ph%E1%BA%A9m+%E2%80%9CTh%C3%A0nh+ph%E1%BB%91+C%C3%A0+Mau+v%E1%BB%81+%C4%91%C3%AAm%E2%80%9D%2C+t%C3%A1c+gi%E1%BA%A3+Nguy%E1%BB%85n+V%C4%83n+Ph%E1%BB%A5ng.png?MOD=AJPERES&CVID=" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Nhịp sống của thành phố Cà Mau (Ảnh: Phạm Dương Hải)</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Sau khi giải phóng miền Nam, ngày 01/01/1976, tỉnh Cà Mau và tỉnh Bạc Liêu hợp nhất thành một tỉnh có tên gọi là Cà Mau – Bạc Liêu. Ngày 10/03/1976, tỉnh Cà Mau – Bạc Liêu đổi thành tỉnh Minh Hải. Ngày 01/01/1997, tỉnh Minh Hải tách thành tỉnh Cà Mau và tỉnh Bạc Liêu.</p>
+                </section>
+                
+                <section>
+                    <p><i><b>Khí hậu địa hình</b></i></p>
+                    <p class="my-height" align="right">Nằm trong khu vực nội chí tuyến bắc bán cầu, cận xích đạo, nhiệt đới gió mùa, Cà Mau có khi hậu ôn hòa với 2 mùa rõ rệt, ít có mưa bão. Mùa mưa kéo dài từ tháng 5 - tháng 11, mùa khô từ tháng 11- tháng 4 năm sau.
+        
+        </p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R637096779215181416.png" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Thu hoạch tôm ở Thới Bình (Ảnh: Nguyễn Văn Đum)</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Cà Mau là vùng đồng bằng ven biển, có nhiều sông rạch, địa hình tương đối bằng phẳng và thấp, có tới 90% diện tích ngập mặn, nhiễm phèn. Vì vậy, đất đai ở đây rất phì nhiêu, màu mỡ, thích hợp nuôi trồng thủy sản, lúa và rừng ngập mặn.</p>
+                </section>
+                
+                <section>
+                    <p><i><b>Sông ngòi</b></i></p>
+                    <p class="my-height" align="right">Cà Mau là tỉnh có hệ thống sông ngòi, kênh rạch chằng chịt với tổng chiều dài hơn 7.000 km. Trong đó, có những con sông có chiều dài hơn 50 km như sông Bạch Ngưu (72 km), sông Ông Đốc (hơn 60 km), sông Cửa Lớn (58 km), sông Gành Hào (56 km). Một số kênh lớn như Quản Lộ - Phụng Hiệp (dài 118 km), Cà Mau – Bạc Liêu (hơn 70 km).</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R637096779433634010.png" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Một góc Đầm Thị Tường (Ảnh: Nguyễn Thanh Dũng)</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Cà Mau có khá nhiều đầm, trong đó có Đầm Thị Tường là thắng cảnh và điểm du lịch nổi tiếng.</p>
+                </section>
+                
+                <section>
+                    <p><i><b>Tài nguyên thiên nhiên</b></i></p>
+                    <p class="my-height" align="right">Cà Mau là vùng đất giàu tài nguyên rừng và biển.</p>
+                    
+                    <p class="my-height" align="right">Rừng:Hệ sinh thái rừng ngập mặn có diện tích khoảng 54.000 ha với 46 loài thực vật, tiêu biểu như mắm, đước, giá, dà vôi, vẹt… Thảm thực vật úng phèn của Cà Mau có 173 loài, giá trị nhất là cây tràm với tổng diện tích gần 38.000 ha.</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R637096779751161760.png" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Đước - loài cây đặc trưng của Cà Mau (Ảnh: Huỳnh Lâm)</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Biển: Bờ biển Cà Mau dài 254 km, chiếm 7,7% chiều dài bờ biển cả nước. Diện tích vùng biển rộng trên 71.000 km2, là một trong 4 ngư trường trọng điểm của Việt Nam với những loài thủy sản có giá trị và sản lượng lớn như tôm, mực, ghẹ, cá thu, cá chim, cá mú…</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R636625814739176657.jpg" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Bãi bồi Mũi Cà Mau (Ảnh: Võ Thanh Quang)</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Biển Cà Mau tiếp giáp với các nước Campuchia, Thái Lan, Singapore, Indonesia, gần tuyến hàng hải quốc tế nên thuận lợi giao lưu, hợp tác kinh tế biển.</p>
+                    <p class="my-height" align="right">Vùng biển Cà Mau có nhiều cụm đảo lớn nhỏ như: Hòn Khoai, Hòn Chuối, Hòn Buông và Hòn Đá Bạc. Những đảo này là điểm hút khách du lịch trong và ngoài nước.</p>
+                </section>
+                
+                <section>
+                    <p><i><b>Tiềm năng du lịch</b></i></p>
+                    <p class="my-height" align="right">Đến Mũi Cà Mau, du khách được thăm cột mốc tọa độ quốc gia, ngắm rừng, ngắm biển..</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R637096779978955337.png" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Cột mốc tọa độ quốc gia GPS 0001</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Với hệ sinh thái rừng đa dạng, Cà Mau là một trong những tỉnh có hệ động thực vật phong phú và đa dạng.</p>
+                    <p class="my-height" align="right">Đặc biệt, Cà Mau có Khu Dự trữ sinh quyển thế giới Mũi Cà Mau bao gồm Vườn quốc gia Mũi Cà Mau, Vườn quốc gia U Minh Hạ hoang sơ và huyền bí.</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R637096780192997622.png" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Du lịch sinh thái dựa vào cộng đồng ở Đất Mũi (Ảnh: Nguyễn Thanh Dũng)</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Là một trong số địa phương có những sân chim tự nhiên như: Sân chim cà Mau, sân chim Ngọc Hiển, sân chim Chà Là… Những điểm du lịch này đã tạo sức hút, gây tò mò đối với du khách gần xa.</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R637096780393148832.png" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Lễ hội Nghinh ông sông Đốc (Ảnh: Huỳnh Lâm)</em></p>
+                </section>
+                
+                <section>
+                    <p class="my-height" align="right">Bên cạnh đó, tại Cà Mau còn nhiều di tích lịch sử cấp Quốc gia; nhiều lễ hội truyền thống như: Lễ Nghinh Ông, vía Bà, Chôl Chnăm Thmây … mang đậm bản sắc văn hóa của 3 dân tộc Kinh – Hoa – Khmer. </p>
+                </section>
+                
+                <section>
+                    <p><i><b>Giao thông</b></i></p>
+                    <p class="my-height" align="right">Thành phố Cà Mau (cách thành phố Hồ Chí Minh 380 km, cách thành phố Cần Thơ 180 km) nằm trên trục quốc lộ 1 đi từ Cần Thơ đến Năm Căn và quốc lộ 63, đi Kiên Giang và nhiều tuyến sông lớn như Gành Hào, Quản Lộ - Phụng Hiệp, kinh xáng Bạc Liêu chảy ngang nên giao thông rất thuận tiện. </p>
+                    <p class="my-height" align="right">Cảng biển quốc tế Năm Căn nằm trong hệ thống cảng biển thương mại quốc tế có vị trí quan trọng trong việc trung chuyển hàng hóa tới các vùng nội địa và quốc tế. Cảng nước sâu Hòn Khoai là cảng tổng hợp quốc gia, cảng trung chuyển quốc tế khu vực ASEAN.</p>
+                    <p class="my-height" align="right">Cảng hàng không Cà Mau có 7 chuyến bay/tuần đi tuyến thành phố Hồ Chí Minh và ngược lại bằng máy bay ATR72, đáp ứng nhu cầu đi lại của người dân hai tỉnh Cà Mau và Bạc Liêu.</p>
+                </section>
+                
+                <section class="image">
+                    <img src="https://fileapi.surego.vn//Upload/NewsImage/R636625811225164263.jpg" alt="Cảnh đẹp Cà Mau">
+                    <p><em>Cảng hàng không Cà Mau (Ảnh: Trần Quốc Bình)</em></p>
+                </section>
+            </p>
+        </section>
+
+        <section id="business">
+            <h2>Ẩm thực tỉnh Cà Mau</h2>
+            <p>Cà Mau là một tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với vị trí địa lý đặc biệt và tài nguyên phong phú.</p>
+            <a class="back-button" onclick="showContent('home')">Quay về Trang chủ</a>
+        </section>
+
+        <section id="lehoi">
+            <h2>Lễ hội tỉnh Cà Mau</h2>
+            <p>Cà Mau là một tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với vị trí địa lý đặc biệt và tài nguyên phong phú.</p>
+            <a class="back-button" onclick="showContent('home')">Quay về Trang chủ</a>
+        </section>
+
+        <section id="dulich">
+            <h2>Du lịch tỉnh Cà Mau</h2>
+            <p>Cà Mau là một tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với vị trí địa lý đặc biệt và tài nguyên phong phú.</p>
+            <a class="back-button" onclick="showContent('home')">Quay về Trang chủ</a>
+        </section>
+
+        <!-- Liên kết -->
+        <section id="projects">
+            <h2>Liên kết</h2>
+            <p>...</p>
+            <a class="back-button" onclick="showContent('home')">Quay về Trang chủ</a>
+        </section>
+    </main>
+    <script>
+        function showContent(sectionId) {
+            document.querySelectorAll('main > section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
